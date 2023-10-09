@@ -169,7 +169,7 @@ function createWindow() {
   /* Visual Studio */
 
   ipcMain.on("VS2017C", () => {
-    let child = spawn("choco", ['install', '-y', 'visualstudio2017-workload-vctools', '--force']);
+    let child = spawn("choco", ['upgrade', '-y', 'visualstudio2017-workload-vctools', '--force']);
 
     child.stdout.on('data', (data) => {
       console.log(`stdout: ${data}`);
