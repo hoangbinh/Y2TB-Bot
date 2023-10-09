@@ -199,7 +199,7 @@ function createWindow() {
   /* Python */
 
   ipcMain.on("pythonC", () => {
-    let child = spawn("choco", ['install', '-y', 'python', '--force']);
+    let child = spawn("choco", ['install', '-y', 'python', '--force', '--version=3.10.0']);
 
     child.stdout.on('data', (data) => {
       console.log(`stdout: ${data}`);
